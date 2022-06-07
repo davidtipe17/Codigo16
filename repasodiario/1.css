@@ -1,0 +1,165 @@
+
+ 
+ *{
+  
+  font-family: 'Dancing Script', cursive;
+  font-weight: 100;
+  font-size: 30px;
+ } 
+
+.hola, h2 {
+  display: inline;
+}
+
+/* .form {
+font-size: 25px;
+}
+ */
+ /*
+
+ mas utiles de todas las fuentes
+.form__h2 {
+  font-size: 2em;
+  color:rgb(75, 75, 109);
+  font-family: Gerogia;
+  line-height:2;
+  font-weight:900;
+}
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  primer proyecto table {
+
+
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  caption-side: bottom;
+  border-collapse: collapse;
+  background-image: linear-gradient(to left,  rgb(56, 56, 159), white);
+box-shadow: 5px 5px 3px #9d5454;
+}
+H1 {
+  text-align: center;
+  color: blue;
+}
+
+caption {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  font-style: italic;
+}
+
+/* #cabecera {
+    background-color: black;
+    color: white;
+} */
+
+th {
+  background-color: black;
+  color: white;
+}
+
+th,td {
+  border: 1px solid black;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  text-align: center;
+ 
+} */
