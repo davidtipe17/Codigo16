@@ -1,0 +1,124 @@
+.div1-box {
+  height: 400px;
+  width: 400px;
+  background-color: red;
+
+  /* para mover este elemento por tood el navegador*/
+  position: relative;
+  /* al agregar un position a un element este nos 
+da la opcion de usar los siguiente 
+!top
+!left
+!right
+!bottom
+*/
+  /* top: 100px; */
+  /* left: 100px; */
+  right: 100px;
+}
+
+.Padre {
+  width: 300px;
+  height: 300px;
+  background-color: blue;
+  position: relative;
+  /* margin-left: auto; */
+}
+.hijo {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  position: absolute;
+  /* right: 0; */
+  left: calc(50% - 50px);
+  top: calc(50% - 50px);
+}
+/*con esto ocupa todo el ancho*/
+
+.bandera {
+  height: 100vh;
+  border: solid black;
+  position: relative;
+}
+
+.green {
+  background-color: green;
+  height: 100vh;
+  width: 30%;
+  float: left;
+}
+.red {
+  background-color: red;
+  height: 100vh;
+  width: 70%;
+  float: right;
+}
+.escudo {
+  background: url(../../Semana2/images/Coat_of_arms_of_Portugal_\(Lesser\).svg.png);
+  height: 400px;
+  width: 400px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: calc(50%);
+  left: calc(30%);
+}
+
+
+
+/* 
+ejemplo
+h1{
+    font-family: monospace;
+    color: aliceblue;
+}
+
+.bg {
+    border: solid;
+    height: 300px;
+}
+.color-red {
+    background-color: red;
+}
+.color-green {
+    background-color: green;
+}
+
+.bg-img {
+    background: url("../../semana1/images/descarga.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bg-img-goku {
+    background: url(../../Semana2/images/hoy.png);
+    
+    height: 1000px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.p1 {
+    color: aliceblue;
+    font-size: 30px;
+}
+
+ */
+
+/* html {
+
+    font-size: 30px;
+}
+body {
+    font-size: 20px;
+}
+
+h1{
+    font-size: 2em;
+    color: aqua;
+}
+
+p {
+    font-size: 2rem;
+} */

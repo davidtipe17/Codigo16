@@ -1,65 +1,64 @@
-h1{
-/* 
+h1 {
+  /* 
     fon-family es el tipo de letra */
-    /* que pasa si una fuente no existe
+  /* que pasa si una fuente no existe
     en css tenemos la opción de varios tipo de letras */
-    /* para que si la primera no existe css busque en la segunda y asi consecutivamente*/
-    font-family: appe-system;
-font-size: 20px;
-/* ! importante: al poner un peso en font-weight no se coloca uniades*/
-font-weight: 100;
-text-decoration: underline ;
+  /* para que si la primera no existe css busque en la segunda y asi consecutivamente*/
+  font-family: appe-system;
+  font-size: 20px;
+  /* ! importante: al poner un peso en font-weight no se coloca uniades*/
+  font-weight: 100;
+  text-decoration: underline;
+  font-family: "Kdam Thmor Pro", sans-serif;
 }
+
 .parrafo {
+  /* font-family:monospace; */
 
-    font-family: monospace;
-    font-size: 20px;
-  
+  font-family: "Jost", sans-serif;
+  font-size: 20px;
 }
 
-.link{
+.link {
+  font-size: 32px;
+  font-family: monospace;
+  /* al poner none en una propiedad estamos invalidando*/
+  text-decoration: none;
+  /*con la propiedad color: sirve para cambiar el color de texto */
+  /* Hexadecimal: Es una forma en la cual podemos aplicar un color basado en 6 digitos*/
 
-    font-size: 32px;
-    font-family: monospace;
-    /* al poner none en una propiedad estamos invalidando*/
-    text-decoration: none;
-    /*con la propiedad color: sirve para cambiar el color de texto */
-    /* Hexadecimal: Es una forma en la cual podemos aplicar un color basado en 6 digitos*/
-   
-
-    color: rgb(81, 80, 86);
+  color: rgb(81, 80, 86);
 }
 
 body {
-font-family: Arial, Helvetica, sans-serif;
-
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-ul{
-  background-color: rgb(162, 162, 205);  
+ul {
+  background-color: rgb(223, 255, 255);
 }
 
 .span-1 {
-    text-decoration: line-through;
-    text-transform: capitalize;
+  text-decoration: line-through;
+  text-transform: capitalize;
+  background-color:aqua ;
 }
 .span-2 {
-    text-decoration: overline;
+  text-decoration: overline;
 }
 .span-3 {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 .span-4 {
-    text-decoration: line-through;
-    text-decoration-color: red;
+  text-decoration: line-through;
+  text-decoration-color: red;
 }
 .span-5 {
-    text-decoration: overline;
-    background-color: greenyellow;
-    text-decoration-color: whitesmoke;
-    text-transform: uppercase;
+  text-decoration: overline;
+  background-color: greenyellow;
+  text-decoration-color: whitesmoke;
+  text-transform: uppercase;
 }
-
 
 /*
 lowercase = minuscula todo el texto 
@@ -69,14 +68,34 @@ capitalize = primero del texto en mayuscula
 */
 
 .span-6 {
-    text-decoration: underline;
-    background-color: rgb(179, 19, 179);
-    text-decoration-color: red;
-    color: aliceblue;
-/* Estamos indicando que el texto sea en minusculas*/
-text-transform: lowercase;
+  text-decoration: underline;
+  background-color: rgb(179, 19, 179);
+  text-decoration-color: red;
+  color: aliceblue;
+  /* Estamos indicando que el texto sea en minusculas*/
+  text-transform: lowercase;
 }
 
+@font-face {
+    font-family: "dankmonoitalic";
+    src: url("../fonts/dankmonoitalic.otf");
+}
 
+@font-face {
+    font-family: "dankmonoregular";
+    src: url(../fonts/dankmonoregular.otf);
 
+}
+@font-face {
+    font-family: "fresca-regulae";
+    src: url(../fonts/Fresca-Regular.ttf);
+}
 
+.titulo2 {
+font-family: "dankmonoregular";
+
+}
+
+.parrafo2 {
+    font-family:"fresca-regulae" ;
+}

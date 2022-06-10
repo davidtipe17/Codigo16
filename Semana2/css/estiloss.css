@@ -1,0 +1,71 @@
+body {
+  background-color: rgb(57, 54, 55);
+}
+
+#contenedor {
+    /*estilos*/ /**/
+  width: 200px;
+  height: 200px;
+  /* background-color: tomato; */
+  margin: auto;
+/**/
+  /*gradientes*/
+background: linear-gradient(to right, red 30%, white 30%,white 67% , red 67% ) ;
+
+}
+
+
+#contenedor:hover {
+    background: linear-gradient(to top, red 30%, white 30%,white 67% , red 67% );
+border-radius: 100px;
+}
+#circulo:hover{
+    background:none;
+    background-color: aqua;
+}
+#circulo{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    margin: 60px auto;
+    /* border-top-left-radius: 200px; */
+    border-radius:100px;
+    background: linear-gradient(to right, red 30%, white 30%,white 67% , red 67% ) ;
+
+}
+
+
+.sombra {
+
+
+   
+  box-shadow: 20px 20px 10px 0px black;
+
+ /* el tecer parametro es la difuminiacion*/
+ /* el cuarto parametro es para que agrande la difuminizacion
+  box-shadow: 20px 20px 0px 10px; */ 
+  /*el quinto parametro es para el color
+  box-shadow: 20px 20px 0px 10px yellow;
+  */
+  
+  /*sombre a la izquiera
+     box-shadow: 20px 20px;
+    */
+
+  /* 1er parametro: eje x (default derecha)*/
+  /* 2 parametro: eje y (default abajo)*/
+}
+.sombra-texto {
+    text-shadow: 10px 10px 10px red;
+}
+
+h1 {
+  color: white;
+  border: 1px solid;
+  border-radius: 10px ;
+  text-align: center;
+
+}
+h1:hover {
+    text-decoration: underline;
+}

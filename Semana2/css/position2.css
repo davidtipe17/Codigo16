@@ -1,0 +1,38 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  z-index: 1;
+}
+
+nav {
+  background-color: rgb(219, 64, 64);
+}
+
+/*al poner el atributo fixed convertimos al elemento en inline*/
+
+ul {
+  padding: 20px;
+}
+ul li {
+  display: inline;
+}
+
+a {
+  color: brown;
+  text-decoration: none;
+}
+div {
+  position: relative;
+  top: 100px;
+}
+
+#nosotros {
+  
+  background-color: aqua;
+  height: 100vh;
+}

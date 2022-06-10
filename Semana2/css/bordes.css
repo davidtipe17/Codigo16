@@ -1,0 +1,55 @@
+h1 {
+  font-family: "dankmonoregular";
+  text-transform: uppercase;
+  text-align: center;
+}
+p {
+  text-align: center;
+  font-size: 40px;
+  font-family: "dankmonoregular";
+}
+
+.p {
+  border-style: solid;
+  border-color: rgb(144, 255, 238);
+}
+.p2 {
+  /*definir el estilo del borde si va  aser punteado etc....*/
+  border-style: dashed;
+  border-color: rgb(150, 219, 244);
+  /* esto sirve para modificar el ancho del borde*/
+  border-width: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.p3 {
+  /*Colocar el estilo en una sola linea*/
+  /*engloba border color, border width,border style*/
+  border: 3px dotted rgb(243, 139, 153);
+}
+.p4 {
+  /* border-style: double; */
+  /* border-color: ; */
+  /*border en una sola linea*/
+  border-right: double rgb(247, 160, 142) 3px;
+}
+.p5 {
+  /* border-style: groove; */
+  border-color: rgb(177, 255, 141);
+
+  border-left-style: solid;
+}
+
+.body1 {
+  font-size: 25px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.small {
+    font-size: 1em;
+}
+
+@font-face {
+  font-family: "dankmonoregular";
+  src: url(../fonts/dankmonoregular.otf);
+}
