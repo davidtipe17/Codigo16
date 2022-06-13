@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
+}
+
+.contenedor {
+  background-color: hsl(212, 80%, 46%);
+  height: 100vh;
+
+  /* position: relative; */
+}
+
+.contenedor-interno {
+  width: 375px;
+  background-color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 20px;
+  margin: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+
+  /* position: absolute;
+  top: 20%;
+  border: solid;
+
+left: calc(50% - 187.5px) ; */
+}
+
+.contenedor-interno * {
+  margin-top: 20px;
+}
+
+/*last-child => obtenemos el ultimo elemento*/
+/* .contenedor-interno: :last-child {
+    
+} */
+
+h4 {
+  width: 60%;
+  margin: auto;
+}
+p {
+  width: 70%;
+  margin: auto;
+}
+
+img {
+  width: 340px;
+  border-radius: 16px;
+  margin-bottom: auto;
+}
