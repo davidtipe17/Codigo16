@@ -1,0 +1,75 @@
+
+.container{
+display: flex;
+    height: 100vh;
+    border: solid black;
+
+/*alinea los elementos de forma horizontl*/
+/*Tiene 3 posibles varlores */
+/*Flex-start: alnea los elementos al lado izquierdo*/
+/*center: Alinea al centro*/
+/*flex-end: alinea los elementos al lado derecho */   
+
+/* !estos tres separan los elementos de forma horizantal
+!la diferencia que el margen que tiene cada uno es mayor
+!nota:este va a depender de cuanto espacio tenga libre
+!y si no hay espacio libe el margen sera 0 */
+/*space- between: alinea los elementos de extremo a extremo*/
+/*space-around:*/
+/*space-evenly*/
+
+justify-content: flex-start;
+
+
+/* la propiedad que se encarga de alinear elemetos de forma
+vertical es el align-items*/
+
+align-items: center;
+
+/*flex tambien permite controlar la direccion de los
+elementos */
+/*colum: */
+flex-direction: column;
+
+}
+.container div {
+    border: solid red 3px;
+    height: 300px;
+    width: 300px;
+   
+}
+.container2{
+
+    /*se utiliza row-reverse es para poder ivertir los div
+    hijos y tambien trabjaria con justify-content que pasaria
+    de controlar lo horizontal a lo vertical*/
+    display: flex;
+    height: 100vh;
+    border: solid black;
+    justify-content: space-around;
+    flex-direction: row-reverse ;
+}
+
+.container2 div {
+    height: 300px;
+    width:20% ;
+    border: solid red 3px;
+}
+.container3{
+
+    /*se utiliza colum-reverse es para poder ivertir los div
+    hijos y tambien trabjaria con align-item pasaria
+    de controlar lo vertical a lo horizontal*/
+    display: flex;
+    height: 100vh;
+    border: solid black;
+    justify-content: space-around;
+    flex-direction: column-reverse ;
+    
+}
+
+.container3 div {
+    height: 300px;
+    width:20% ;
+    border: solid red 3px;
+}

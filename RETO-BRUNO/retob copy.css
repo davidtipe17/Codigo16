@@ -10,7 +10,7 @@ body {
   padding: 0;
 }
 #div {
-  height: 100%;
+  height: 100vh;
   background-color: hsl(225, 38%, 18%);
 }
 .contenedor {
