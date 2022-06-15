@@ -1,0 +1,37 @@
+#box{
+   width: 200px;
+    height:200px ; 
+    background-color: aqua;
+    transition: width 6s, height 2s, background-color 6s;
+}
+
+#box:hover {
+
+    width: 400px;
+    height: 400px;
+    background-color: yellow;
+    /*aqui se aplica la transicion detallada*/
+    transition: width 2s, height 2s, background-color 2s;
+    /*aqui se aplica la transicion general aprovechando que el tiempo
+    es el mismo*/
+    /* transition: all 2s; */
+}
+
+
+#box2{
+    width: 200px;
+     height:200px ; 
+     background-color:red;
+     transition: width 6s, height 2s, background-color 6s;
+ }
+
+#box2:hover {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient( to right, red 30%, white 30%,white 67% , red 67% );
+    transition: width 2s, height 2s, background-color 2s;
+}
+
+body div {
+    margin: 10px;
+}
