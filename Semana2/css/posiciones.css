@@ -22,10 +22,10 @@ body {
 }
 
 .Padre {
-  width: 300px;
+  width: 600px;
   height: 300px;
   background-color: blue;
-  position: relative;
+  
   /* margin-left: auto; */
 }
 .hijo {
