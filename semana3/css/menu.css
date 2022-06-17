@@ -54,7 +54,7 @@ header a:hover {
 /* Cada elemento del menú escondido */
 .dropdown-content li {
   /* display: inline; */
-  
+
   width: 140px;
   padding: 20px;
   background-color: aqua;
@@ -63,7 +63,7 @@ header a:hover {
 /* Las anclas que estén dentro de cada elemento del menú escondido */
 .dropdown-content li a {
   text-decoration: none;
-  color: #666;  
+  color: #666;
 }
 .dropdown-content li a:hover {
   text-decoration: underline;
@@ -78,9 +78,10 @@ header a:hover {
 .dropdown:hover .dropdown-button {
   text-decoration: underline;
 }
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    /* body{
+  /* body{
         background-color: red;
     }
     header {
@@ -100,31 +101,46 @@ header a:hover {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    /* body{
+  /* body{
         background-color: green;
     } */
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 992px) {
-    body {
+  /* body {
       background-color: yellow;
     }
-  
-    header {
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-start;
-      height: 100vh;
-      width: 45%;
-    }
-  
-    header ul {
-      margin-top: 20px;
-      flex-direction: column;
-      padding: 0;
-    }
+   */
+
+  #page {
+    display: flex;
   }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100vh;
+    width: 10%;
+  }
+
+  header:hover {
+    width: 20%;
+    padding: 20px 50px;
+    transition: all 3s;
+  }
+
+  header ul {
+    margin-top: 20px;
+    flex-direction: column;
+    padding: 0;
+  }
+  .dropdown-content {
+    margin-top: 0px;
+    margin-left: 40px;
+  }
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
 /* @media only screen and (min-width: 992px) {
@@ -139,4 +155,42 @@ header a:hover {
         background-color: black;
     }
 } */
+main {
+  width: 100%;
+}
+#container {
+  margin: 50px auto;
+  width: 50%;
+}
 
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+
+.row > div {
+  width: 25%;
+  text-align: center;
+}
+
+.th {
+  background-color: #333;
+  color: white;
+  font-weight: bolder;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.tr {
+  background-color: #eee;
+  border-bottom: 1px dashed;
+}
+
+.tr:nth-child(even) {
+  background-color: white;
+}
+.tr:last-child {
+  border-bottom: 1px #666 solid;
+  border-radius: 0 0 10px 10px;
+}

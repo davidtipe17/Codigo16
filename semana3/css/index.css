@@ -121,7 +121,7 @@ section p {
   background: url("../images/polo-bicolor.svg");
 }
 
-.container2 {
+/* .container2 {
   display: flex;
   justify-content: space-around;  
 }
@@ -148,7 +148,47 @@ section p {
   color: #fff;
   max-width: 291px;
   text-align: left;
+} */
+.popular-container {
+  display: flex;
+  margin: 40px;
+  justify-content: center;
 }
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  background-color: white;
+  color: black;
+}
+
+.price p {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 20%;
+}
+
+.line {
+  text-decoration: line-through;
+}
+
+.price a {
+  width: 60%;
+  text-align: right;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.description {
+  font-size: 14px;
+  max-width: 75%;
+  font-weight: 100;
+}
+
+
 
 @media only screen and (max-width: 1200px) {
   /* body {
@@ -178,5 +218,20 @@ section p {
   }
   .big-child {
     width: 100%;
+  }
+
+  .popular-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .description {
+    max-width: 100%;
+  }
+
+  .price {
+    max-width: 100%;
+    margin-bottom: 20px;
   }
 }
