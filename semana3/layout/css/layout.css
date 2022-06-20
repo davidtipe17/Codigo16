@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+padding: 0;
+}
+
+
+body {
+    background-color: #C8EBE3;
+    font-family: Arial, Helvetica, sans-serif ;
+
+}
+
+header {
+    background-color: #C8EBE3;
+height: 10vh;
+text-align: center;
+
+}
+main {
+    height: 70vh;
+    display: flex;
+    justify-content: space-between;
+}
+aside {
+background-color: #6EDC6E;
+flex-grow: 0.5;
+}
+
+.container {
+background-color: #FBB14A;
+flex-grow: 2;
+}
+
+footer {
+background-color: #2CCAC1;
+height: 20vh;
+text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+main {
+    flex-direction: column;
+}
+
+}
