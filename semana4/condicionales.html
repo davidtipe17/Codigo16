@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .blue {
+        color: blue;
+      }
+
+      .red {
+        color: red;
+      }
+
+      .marron {
+        color: brown;
+      }
+      .azul {
+        color: blue;
+      }
+      .amarillo {
+        color: yellow;
+      }
+      .turqueza {
+        color: aqua;
+      }
+    </style>
+    <title>JS - Conditionales</title>
+  </head>
+  <body>
+    <h1>Martes 21 de junio</h1>
+    <h2>Condicionales + document.write</h2>
+    <hr />
+  </body>
+  <script type="text/javascript">
+    document.write("<h3> Notas </h3>"); //Escribe dentro del HTML
+    let nota = 10; // la nota de un alumno
+    // document.write("<p>" + nota+"</p>");
+    //isNaN: evalua si un valor no es numero
+    if (isNaN(nota)) {
+      alert("Solo numeros por favor");
+      nota = Number(prompt("Ingresar nota:"));
+    }
+
+    //IF es si en condicional document
+    //ELSE: sino.
+
+    if (nota < 11) {
+      document.write("<p class='red' > Desaprobado </p>");
+      //instrucciones si se cumple condición
+    } else {
+      //se esta
+      document.write("<p class='blue' > Aprobado </p>");
+      // instruccion si no se cumple la primera condicion
+    }
+    document.write("<hr>");
+    //Angulos
+
+    document.write("<h3> Angulos </h3>");
+
+    let angulo = 0;
+    document.write("<p>" + angulo + "</p>");
+
+    if (angulo == 0) {
+      document.write("<h3> Nulo</h3>");
+    } else if (angulo < 90) {
+      document.write("<h3> Agudo </h3>");
+    } else if (angulo == 90) {
+      document.write("<h3> Recto </h3>");
+    } else if (angulo < 180) {
+      document.write("<h3> Obtsuo </h3>");
+    } else if (angulo == 180) {
+      document.write("<h3> llano </h3>");
+    } else if (angulo < 360) {
+      document.write("<h3> Concavo </h3>");
+    } else if (angulo == 360) {
+      document.write("<h3> Completo </h3>");
+    } else {
+      document.write("<h3> NO existeeee </h3>");
+    }
+    // if (angulo == 0) {
+    //     document.write("<h3> Nulo</h3>");
+    // } else {
+    //     if (angulo < 90) {
+    //   document.write("<h3> Agudo </h3>");
+    // } else {
+    //   if (angulo == 90) {
+    //     document.write("<h3> Recto </h3>");
+    //   } else {
+    //     if (angulo < 180) {
+    //       document.write("<h3> Obtsuo </h3>");
+    //     } else {
+    //       if (angulo == 180) {
+    //         document.write("<h3> llano </h3>");
+    //       } else {
+    //         if (angulo < 360) {
+    //           document.write("<h3> Concavo </h3>");
+    //         } else {
+    //           if (angulo == 360) {
+    //             document.write("<h3> Completo </h3>");
+    //           } else {
+    //             document.write("<h3> NO existeeee </h3>");
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
+    // }
+
+        document.write("<hr>");
+    //Temperatura
+        let tp = Number(prompt("Ingrese la temperatura"));
+        document.write("<p>" + tp + "</p>");
+        if (tp < 10) {
+          document.write("<h3 class='azul'> ClIMA FRIO </h3>");
+        } else if (11 < tp < 16) {
+          document.write("<h3 class='marron'> ClIMA TEMPLADO </h3>");
+        } else if (17 < tp < 24) {
+          document.write("<h3 class='turqueza'> ClIMA CALIDO </h3>");
+        } else if (tp > 24) {
+          document.write("<h3 class='amarillo'> ClIMA TROPICAL </h3>");
+        } else {
+          document.write("<h3> CLIMA NO IDENTIFICADO </h3>");
+        }
+
+    //Tipo de datos:
+    //String (cadena = texto)
+    //Numeric (numero)
+    //Boolean (booleano True / False)
+    //&& (AND)
+    //|| (OR)
+    //! (NOT)
+
+    // operadores logicos
+
+    // alert(true && true); // true
+    // alert(true && false); //false
+    // alert(false && true); // false
+    // alert(false && false); // false
+
+    // // si 1 de los valores es false, entones false.
+    let hora = 15;
+    hora < 18; // true | false
+    hora > 6; // true | false
+
+    if (hora < 18 && hora > 18) {
+      document.write("<p> Es dia</p>");
+    } else {
+      document.write("<p> es de noche </p>");
+    }
+
+    // alert(true || true); // true
+    // alert(true ||  false); //true
+    // alert(false ||  true); // true
+    // alert(false || false); // false
+    
+    nombre = "Magaly";
+    let edad = 35; //> 30
+    let estado_civil = "casada"; // casada
+    let numero_hijos = 2; // > 0
+
+    if (edad == 35 || numero_hijos > 2) {
+        //una forma de concatenar
+      document.write("<p>Buen día Señora. " + nombre + "</p>");
+    } else {
+        //sin concatenar
+      document.write("<p> Es señorita </p>");
+    }
+
+
+    // = asignar valor a una variable
+    // == comparar 2 valores (se usa en una condicion)
+    // === comparar 2 valores adicionalmente por el tipo de dato.
+    // >mayor que
+    //< menor que
+    //>= mayor o igual
+    //<=Menor o igual
+
+    document.body.style.backgroundColor = "aqua"
+    // document.getElementsByTagName("h1") [0].innerText = 'David Tipe'
+  let h1_texto = document.getElementsByTagName("h1") [0].innerText;
+  alert(h1_texto);
+  
+  </script>
+</html>
