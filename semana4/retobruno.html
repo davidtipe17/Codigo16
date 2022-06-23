@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .title {
+        color: aqua;
+        text-align: center;
+      }
+      .verde{
+        color: green;
+      }
+    </style>
+  </head>
+
+  <body></body>
+  <script type="text/javascript">
+    document.write("<hr>");
+    document.write("<h1 class='title' > RETO 1 </h1>");
+
+    let Nombre = String(prompt("Ingrese el nombre"));
+    let Sexo = String(prompt("Ingrese el Sexo"));
+    let edad = Number(prompt("Ingrese la edad"));
+    let nota = Number(prompt("Ingrese la nota"));
+
+    document.write("<hr>");
+    document.write("<h1 class='title' > DATOS INGRESADOS </h1>");
+
+    document.write("<p>" + Nombre + "<p>");
+    document.write("<p>" + Sexo + "<p>");
+    document.write("<p>" + edad + "<p>");
+    document.write("<p class = 'verde'>" + nota + "<p>");
+
+    document.write("<hr>");
+
+    if (Sexo == "M" && edad <= 35) {
+      document.write(
+        `<p> El joven ${Nombre} que tiene ${edad} tiene la siguiente calificación:"<p>`
+      );
+    } else if (Sexo == "M" && edad <= 35) {
+      document.write(`<p> El Sr. ${Nombre} que tiene ${edad} tiene la siguiente calificación:"<p>`);
+    } else if (Sexo == "F" && edad <= 50) {
+      document.write(`<p> La Sra. ${Nombre} que tiene ${edad} tiene la siguiente calificación:"<p>`);
+    } else if (Sexo == "F" && edad > 50) {
+      document.write(`<p> La joven ${Nombre} que tiene ${edad} tiene la siguiente calificación:"<p>`);
+    }
+
+    if (nota >= 0 && nota <= 3) {
+      document.write("<p> Muy deficiente <p>");
+    } else if (nota > 3 && nota <= 5) {
+      document.write("<p> Insuficiente <p>");
+    } else if (nota > 5 && nota <= 6) {
+      document.write("<p> Sufienciente<p>");
+    } else if (nota > 6 && nota <= 7) {
+      document.write("<p>Bien <p>");
+    } else if (nota > 7 && nota <= 9) {
+      document.write("<p>Notable<p>");
+    } else if (nota > 9 && nota <= 10) {
+      document.write("<p class= 'verde'> Sobresaliente <p>");
+    } else {
+      document.write("<p> no exite una nota asi <p>");
+    }
+  </script>
+</html>

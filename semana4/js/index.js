@@ -26,9 +26,13 @@ const primerApellido ="Tipe"
 let edad = 22;
 let dias = 20;
 let estaVivo = true;
+
+frase = ` soy ${primerNombre} y estoy probando`
+document.write(frase)
 console.log("Concatenacion");
-console.log(primerNombre+ " " + primerApellido + edad)
-console.log(edad + dias);
+document.write()
+// console.log(primerNombre+ " " + primerApellido + edad)
+// console.log(edad + dias);
 
 //En js podemos hacer cualquier tipo de operacion matematica
 // "* + - /"
