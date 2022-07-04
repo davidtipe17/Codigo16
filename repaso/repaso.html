@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  
+<body>
+    <!--setting styles for our document-->
+  
+    <style>
+        p,
+        ol {
+            color: green;
+        }
+    </style>
+  
+    <p>GeeksForGeeks Courses</p>
+  
+    <ol>
+        <li id="geek">DSA</li>
+        <li>Interview Preparation</li>
+        <li>Geeks Classes</li>
+    </ol>
+  
+    <p>Click the button to get the node 
+      name of the parent element</p>
+  
+    <button onclick="myParentElement()">
+      Click to know the parent element
+  </button>
+    <!--here 'li' element is inside 'ol' element meaning
+      that 'ol' is the parent of 'li' element here-->
+    <p id="gfg"></p>
+  
+    <script>
+        function myParentElement() {
+            var text = document.getElementById(
+              "geek").parentElement.nodeName;
+            document.getElementById("gfg").innerHTML = text;
+        }
+    </script>
+  
+</body>
+  
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">
+    
+    </div>
+</body>
+<script src="./repaso.js">
+
+</script>
+</html> -->

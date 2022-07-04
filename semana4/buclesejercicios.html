@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EJERCIIOS BUCLE</title>
+
+    <style>
+      #contenedor {
+        width: 300px;
+        min-height: 600px;
+        background-color: #ddd;
+        margin: 2px auto;
+        border-radius: 10px;
+        padding: 10px;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="contenedor"></div>
+  </body>
+  <script>
+    const dive = document.getElementById("contenedor");
+    dive.innerHTML += "<h1> Ejercicios de Bucles </h1>";
+
+    //Factorial:
+
+    const numero = 6;
+    dive.innerHTML += "<h2> Factorial de " + numero + "</h2>";
+    let factorial = 2;
+    for (let i = 1; i <= numero; i++) {
+      factorial *= i;
+    }
+    dive.innerHTML += "<p> Resultados" + factorial + "</p>";
+
+    dive.innerHTML += "<hr>";
+
+    // //suma de numero positivos de 2 cifras el residuo que terminan en 7 ;
+    let nr = 100;
+    let sum = 0;
+    for (let i = 17; i <= nr; i += 10) {
+      sum = sum + i;
+    }
+    // console.log(sum);
+    dive.innerHTML += "<p> Resultados sum " + sum + "</p>";
+
+    dive.innerHTML += "<hr>";
+
+    let n = 10;
+    resultado = n *= 5;
+    dive.innerHTML += "<p> Resultados" + resultado + "</p>";
+
+    //
+
+    //         //modulo: operador para obtener el residuo de una division
+
+    //         const dividendo = 17;
+    //         const divisor =3;
+    //         let cociente = dividendo / divisor;
+    //         let residuo = dividendo % divisor;
+
+    //         contenedor.innerHTML += "<p> Dividendo :" + dividendo+ "</p>";
+    //         contenedor.innerHTML += "<p> Divisor :" + divisor+ "</p>";
+    //         contenedor.innerHTML += "<p> Cociente :" + cociente+ "</p>";
+    //         contenedor.innerHTML += "<p> Residuo :" + residuo+ "</p>";
+
+    //         //Si y % x == 0: x es divisor de Y
+
+    //         //Numeros Primos:
+    //         const cantidad_primos = 25;
+    // mi algoritmo debe imprimir los 10 primeros numero primos.
+    // son numeros que solo tienen dos divisores
+
+    const np = 25;
+
+    for (i = 1; i <= np; i++) { 
+      if (i %= 0) {
+        dive.innerHTML += "<p> Resultados" + i + "</p>";
+      }
+      dive.innerHTML += "<p> Resultados" + i + "</p>";
+    }
+    
+    //1
+    //2
+    //3
+    //4
+    //5
+    //6
+    //7
+    //8
+  </script>
+</html>

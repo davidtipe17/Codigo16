@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Bucles</title>
+    <style>
+      #container {
+        width: 300px;
+        min-height: 500px;
+        background-color: #ddd;
+        margin: 2px auto;
+        border-radius: 10px;
+        padding: 10px;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+  </body>
+
+  <script>
+    //document.getElementById();
+
+    const div_container = document.getElementById("container");
+    div_container.innerHTML = "Hola a todos";
+
+    // let frutas = ["naranja", "manzana", "pera", "limon", "freza"];
+
+    // // div_container.innerHTML +="<p>" + frutas [1]+ "</p>";
+
+    // for (let iter = 0; iter < frutas.length; iter++) {
+    //   if (frutas[iter] == "limon") {
+    //     break;
+    //     //continue omite la condicion del if y continua
+    //     // continue;
+    //   }
+    //   div_container.innerHTML += "<p>" + frutas[iter] + "</p>";
+    // }
+
+    let numero = 15;
+    for (let iter = 1; iter <= 20; iter++) {
+      div_container.innerHTML +=
+        "<p>" + numero + " x" + iter + " = " + numero * iter + "</p>";
+    }
+
+    // const numero_tablas = 1;
+
+    // for (let i = 1; i <= numero_tablas; i++) {
+    //   div_container.innerHTML += "<h2> Tabla del " + i + "</h2>";
+    //   for (let j = 1; j <= 10; j++) {
+    //     let texto = i + "x" + j + "=" + i * j;
+    //     div_container.innerHTML += "<p>" + texto + "</p>";
+    //   }
+    // }
+
+    // div_container.innerHTML += "<hr>";
+
+    // // for of: tambien es una estructura de control para poder recorrer objetos iterables
+    // //(Array, string, Map, Set)
+
+    // let productos = [
+    //   "Mouse",
+    //   "teclado",
+    //   "parlante",
+    //   "monitor",
+    //   "celular",
+    //   "adaptador",
+    //   "cargador",
+    // ];
+
+    // //for (var iter of obejtoIterable) { ..  }
+    // for (let x of productos) {
+    //   div_container.innerHTML += "<p>" + x + "</p>";
+    // }
+    // div_container.innerHTML += "<hr>";
+
+    // const frase = "Amo programar";
+    // for (let letra of frase) {
+    //   if (letra == " ") continue;
+    //   div_container.innerHTML += "<p> - " + letra + "</p>";
+    // }
+
+    // div_container.innerHTML += "<hr>";
+    // //FOR IN: estructura de control para poder recorrer objetos iterables
+    // //capturando el indice o llave o propiedad
+    // ///(Array, string, Map, Set)
+    // for (let x in productos) {
+    //   div_container.innerHTML += "<p>" + x + "</p>";
+    // }
+
+    /* utilizacion
+    -array.filter
+    - array.eachx
+    -for.of
+
+    -for
+
+    -while
+    
+    */
+
+    //utilizando for:
+    //imprimir cada tabla del 1 a "numero_tablas", del 1 al 20;
+    //1 x 1 = 1
+    //2 x 1 = 2
+    //imprimir la tabla de multiplicar el 1 al 20 (del numero 15)
+    //for generico: 3 parametros
+    //param1: declarar variable a iterar.
+    //param2: condición del bucle.
+    //param3: Como vamos a iterar la variable
+    //separador de paramegtro: ";"
+
+    // let iter = 0;
+
+    // while (iter < frutas.length) {
+    //   div_container.innerHTML += "<p>" + frutas[iter] + "</p>";
+
+    //   if (frutas[iter] == "limon") {
+    //     break;
+    //   }
+
+    //   iter += 1;
+    // }
+
+    //bucle: conjunto de ciclos.
+    //break: rompe el bucle completo.
+    //continue: rompe Solo el ciclo actual, pero el bucle continua.
+
+    //break:
+  </script>
+</html>

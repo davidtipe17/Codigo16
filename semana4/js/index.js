@@ -1,19 +1,19 @@
 //variable que pueda cambiar de tipo
 
-let numero =10;
-console.log("Primer tipo",numero)
+let numero = 10;
+console.log("Primer tipo", numero);
 // se cambio el tipo de dato
 //cuando alteramos el valor de una variable no hace falta poner otra vez let o const
 //let o const va solo cuando se crea la variable
-numero ="pepe"
-console.log("Segundo Tipo", numero)
+numero = "pepe";
+console.log("Segundo Tipo", numero);
 // document.write (numero)
 //console.log permite imprimir un valor en la consola del navegador
 // console.log(numero);
 
 //! const
-const igv= 0.18;
-console.log("Primer IGV", igv)
+const igv = 0.18;
+console.log("Primer IGV", igv);
 //alerta en el navegador
 // alert(igv)
 //! este no es posible
@@ -21,16 +21,16 @@ console.log("Primer IGV", igv)
 // console.log("Segund IGV", igv)
 
 //! concatenación: basicamente es juntar 2 0 mas variables
-const primerNombre = "David"
-const primerApellido ="Tipe"
+const primerNombre = "David";
+const primerApellido = "Tipe";
 let edad = 22;
 let dias = 20;
 let estaVivo = true;
 
-frase = ` soy ${primerNombre} y estoy probando`
-document.write(frase)
+frase = ` soy ${primerNombre} y estoy probando`;
+document.write(frase);
 console.log("Concatenacion");
-document.write()
+document.write();
 // console.log(primerNombre+ " " + primerApellido + edad)
 // console.log(edad + dias);
 
@@ -39,15 +39,15 @@ document.write()
 
 // como combertir un number a string
 // sepamos que en js existen string y number.
-//Al hace esto estamos transformando un entero un string 
-console.log("bolean", estaVivo)
+//Al hace esto estamos transformando un entero un string
+console.log("bolean", estaVivo);
 //ejemplo
 //"22" + "20" = "2220"
-console.log(String(edad)+ String(dias));
-//lo que es numero se ve en letra morada y la cadena en blanco 
-console.log("Edad",String(edad));
+console.log(String(edad) + String(dias));
+//lo que es numero se ve en letra morada y la cadena en blanco
+console.log("Edad", String(edad));
 //boleean a string
-console.log(String(estaVivo)+String(dias));
+console.log(String(estaVivo) + String(dias));
 
 // recipiente = "papel"
 
@@ -76,15 +76,14 @@ console.log(String(estaVivo)+String(dias));
 // nombre = "javier"
 //alert(nombre);---->
 
-// como declarar una variable? 
+// como declarar una variable?
 // let si se puede modificar.
 // let numero; ---->
 // numero = 29; ---->
 
 // en un misma linea
-// let numero= 29; 
+// let numero= 29;
 // alert(numero); ---->
-
 
 // declarar muchas variables //scope
 // let n, n2, n3; ---->
@@ -104,7 +103,7 @@ console.log(String(estaVivo)+String(dias));
 // es una variable vacia declara, se declara vacia
 // let nmr = null ;
 // let nmr2 = 6; ---->
-// let nmr3 = 4; ----> 
+// let nmr3 = 4; ---->
 // alert(nmr2 + nmr3); ---->
 //esta es una función
 
@@ -114,24 +113,32 @@ console.log(String(estaVivo)+String(dias));
 
 //OPERADORES
 //OPERADORES DE ASIGNACIÓN
-//este es de asignacion es por defecto. 
-// let n = 10;
+//este es de asignacion es por defecto.
+
+document.write("<hr>");
+let np = 50;
 //suma
 // n += 6
 //resta
 // n -= 7
 //multiplicacion
-//n *= 5
+// n *= 5
 //division
 //n /= 5
-
+//
 //el rest %
 //es el resto que figura despues de dividir
-// n %=9;
+// n %=10;
+
+
+    for (let i = 2; i <= np ; i++) {
+        if (i /  === 1 && i / 1 === i) {
+          document.write(i);
+        }
+  }
+
+
+
 //exponentes
 // n  **= 4
 // document.write(n)
-
-
-
-

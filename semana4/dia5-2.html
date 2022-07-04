@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <style>
+      body {
+        font-family: monospace;
+      }
+      .container {
+        width: 400px;
+        min-height: 200px;
+        background-color: cadetblue;
+        padding: 10px;
+      }
+
+      button {
+        padding: 5px;
+        background-color: aqua;
+        border: none;
+        border-radius: 12px;
+        color: #333;
+      }
+      input {
+        padding: 5px;
+        border: none;
+        border-radius: 4px;
+      }
+
+      .container2 {
+        width: 400px;
+        min-height: 200px;
+        background-color: navy;
+        padding: 10px;
+      }
+
+      button {
+        padding: 5px;
+        background-color: aqua;
+        border: none;
+        border-radius: 12px;
+        color: #333;
+        margin-top: 5px;
+      }
+      input {
+        padding: 5px;
+        border: none;
+        margin: 3px;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <input type="text" id="input_nombre" placeholder="Ingrese un Nombre" />
+      <button onclick="imprimirAlumnos()">Agregar Alumno</button>
+      <div>
+        <h4>Lista de Alumnos</h4>
+        <div class="resultado"></div>
+      </div>
+    </div>
+
+    <div class="container2">
+      <input type="text" id="inputnota1" placeholder="Ingrese un Nota" />
+      <input type="text" id="inputnota2" placeholder="Ingrese un Nota" />
+      <input type="text" id="inputnota3" placeholder="Ingrese un Nota" />
+      <input type="text" id="inputnota4" placeholder="Ingrese un Nota" />
+      <button onclick="imprimirPromedio()">Imprimir Promedio</button>
+      <div>
+        <h4>Lista de Promedios</h4>
+        <div class="resul"></div>
+      </div>
+    </div>
+  </body>
+  <script src="./js/dia5-2.js"></script>
+</html>
