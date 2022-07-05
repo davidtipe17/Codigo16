@@ -1,0 +1,13 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.text-error {
+    display: none;
+    color: red;
+}
+
+.text-error-email {
+    display: none;
+    color: red;
+}

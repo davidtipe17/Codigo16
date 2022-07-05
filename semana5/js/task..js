@@ -25,7 +25,7 @@ class Task {
   createNode() {
       const element = document.createElement('p');
       element.setAttribute('id', this.id);
-      element.setAttribute('class', 'task');
+      element.setAttribute('class', 'task todo');
       element.innerHTML = `
           <input type="checkbox" onchange="checkTask(this);">
           <span>${this.text}</span>
