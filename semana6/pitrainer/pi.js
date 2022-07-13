@@ -49,6 +49,7 @@
 const input_username = document.querySelector("#username");
 const button_start = document.querySelector("#start");
 const div_game = document.querySelector("#game");
+let user = null;
 
 input_username.addEventListener("keyup", function () {
   button_start.disabled = this.value == "";
@@ -60,12 +61,11 @@ button_start.addEventListener("click", function () {
   ).innerText += `Hello ${input_username.value}, let's play`;
   this.parentElement.querySelector("h2").style.display = "block";
 
+  // creamos el user:
+  user = new User(input_username.value);
 
-  //vamos a guardar el nombre del usuaruo en localstorage
-  //para usar esto hacemos lo siguiente.
   input_username.disabled = true;
   this.disabled = true;
-
   div_game.style.display = "flex";
 });
 
@@ -92,6 +92,8 @@ const h3_attempts = document.querySelector("#h3_attempts");
 const h3_success_attempts = document.querySelector("#h3_success_attempts");
 const h3_failed_attempts = document.querySelector("#h3_failed_attempts");
 const h3_score = document.querySelector("#h3_score");
+const h3_score_finish = document.querySelector("#h3_score_finish");
+const btn_reiniciar = document.querySelector("#btn-reiniciar");
 
 // KeyDown -> KeyPress -> input value -> KeyUp
 input_pi.addEventListener("keyup", function () {
@@ -115,7 +117,7 @@ input_pi.addEventListener("keydown", function (evt) {
   ) {
     div_game.style.backgroundColor = "red";
     failed_attempts++;
-    showModal(failed_attempts);
+    evalGameOver();
   } else {
     // si pasó las reglas:
     // recuerden que la primera vez position es 0
@@ -143,46 +145,92 @@ input_pi.addEventListener("keydown", function (evt) {
 });
 
 function calcScore(now_attempt) {
-  // tenemos cunto timepo en milisegundo nos demoramos
-  // en escribir cada numero
-
-  //   if (position > 10) {
-  //     const digito = String(position).charAt(0);
-  //     score += 10 + Number(digito) - diff_time * 0.01;
-  //   } else {
-  //     score += 10 - diff_time * 0.01;
-  //   }
   const diff_time = (now_attempt - last_attempt) * 0.01;
-
   const attempt_score =
     position > 10
       ? 10 + Number(String(position).charAt(0)) - diff_time
       : 10 - diff_time;
-
   score += Math.max(attempt_score, -1);
-  // el puntaje sera
-  // los primeros 0 - 10 aciertos seran
-  // score = 10 + 0 - (diff_time * 0.01)
-  // cuando lleguemos a 11 - 19
-  // score = 10 + 1 - (diff_time * 0.01)
-  // cuando lleguemos a 20 - 29
-  // score = 10 + 2 - (diff_time * 0.01)
-  // cuando lleguemos a 30 - 39
-  // score = 10 + 3 - (diff_time * 0.01)
 }
-const h3_score_finish = document.querySelector("#h3_score_finish");
-const btn_reiniciar = document.querySelector("#btn-reiniciar");
 
-function showModal(failed_attempts) {
-  if (failed_attempts === 10) {
-    // activamos los estilos
-    container_modal.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-    lost_container.style.display = "block";
-    container.style.zIndex = -1;
-    input_pi.disabled = true;
-    h3_score_finish.querySelector("span").innerText = score.toFixed(2);
+function evalGameOver() {
+    if (failed_attempts >= 10) {
+      // activamos los estilos
+      // disabled scroll
+      document.body.style.overflow = "hidden";
+      container_modal.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+      container_modal.style.position = "relative";
+      container_modal.style.height = "100vh";
+      container.style.position = "absolute";
+      lost_container.style.display = "block";
+      container.style.zIndex = -1;
+      input_pi.disabled = true;
+      h3_score_finish.querySelector("span").innerText = score.toFixed(2);
+  
+      if (user !== null) {
+        // caso juanito
+        const user_index = users.findIndex(
+          (user_find) => user_find.username === user.username
+        );
+  
+        // juanito no existe en el array de usuarios por ende la funcion findIndex retorna
+        // -1, porque no encontro a la persona
+  
+        // nota: Si findIndex no encuentra lo busquedo retornara -1 porque no encontro
+        // ni una posicion
+        if (user_index === -1) {
+          // si entra al if el usuario no existe
+          user.games.push({
+            score: score,
+            attempts: attempts,
+            success_attempts: success_attempts,
+            failed_attempts: failed_attempts,
+            gameover_at: user.gameover(),
+          });
+  
+          addUserToLocalStorage(user);
+        } else {
+          // si entra ya exister
+          users[user_index].games.push({
+            score: score,
+            attempts: attempts,
+            success_attempts: success_attempts,
+            failed_attempts: failed_attempts,
+            gameover_at: user.gameover(),
+          });
+  
+          updateUserLocalStorage(users);
+          // debemos agregar este dato a locastorage
+        }
+      }
+    }
   }
-}
 
+  const inputSearch = document.querySelector("#input-search");
+  const btnSearch = document.querySelector("#btn-search");
+  
+  btnSearch.onclick = function () {
+    // al darle al boton necesitamos obtener el texto del input
+    const textSearch = inputSearch.value;
+    // Seria buena idea validar que el input este lleno?
+    // Si el input esta vacio vamos a lanzar una alerta indicando que deberia esta lleno
+    if (textSearch === "") {
+      alert("Debe escribir un texto para iniciar la busqueda");
+      // que debemos poner para que la funcion termine su ejecucion?
+      return;
+    }
+    // recuerden que solo entra al if si esta vacio si no hara lo siguiente
+    //? Nota: Estamos transformando a minuscula ambos textos
+    // tanto el de la busqueda como el del array de objetos
+    const filtro = users.filter(
+      (usergames) =>
+        usergames.username.toLowerCase().includes(textSearch.toLowerCase()) 
+      
+    );
+  
+  // luego del filtro a quien debemos llamar?
+  evalGameOver(filtro);
+  };
+  
 
 btn_reiniciar.onclick = () => window.location.reload();
