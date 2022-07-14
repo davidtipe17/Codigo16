@@ -11,18 +11,27 @@
       main > input {
         border-radius: 10px;
       }
+    .delete {
+      text-decoration: line-through;
+    }
     </style>
     <title>Document</title>
   </head>
   <body>
     <main>
-      <input
+      <h1>TASK LIST</h1>
+      <section>
+      <input 
         type="text"
         autocomplete="off"
         id="input-text"
+        autocomplete="off"
         placeholder="Ingrese un valor"
+        
       />
       <input type="button" id="btn-button" value="crear" />
+    </section>
+    <section id="section-task"></section>
     </main>
   </body>
   <script src="./jquery.js"></script>
